@@ -26,8 +26,12 @@ public class CustomerServiceIMPL implements CustomerService {
                 customerDTO.isActiveStatus()
         );
 
-        customerRepo.save(customer);
+        if(customerRepo.existsById(customer.getCutomerId())){
+            customerRepo.save(customer);
+            return customer.getCustomerName()+" saved successfully";
+        }else{
+            return "user id already exists";
+        }
 
-        return customer.getCustomerName()+" saved successfully";
     }
 }
