@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class Controller {
 
-    @GetMapping
-    public String getMyText(){
-        String myText="Hello Springboot";
-        System.out.println(myText);
-        return myText;
-
-    }
+//    @GetMapping
+//    public String getMyText(){
+//        String myText="Hello Springboot";
+//        System.out.println(myText);
+//        return myText;
+//    }
 }
